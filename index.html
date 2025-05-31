@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="top-header">
+        <div class="top-header container">
             <div class="logo-header">
                 <div class="logo">
                     <img src="icons/logo.svg" alt="" class="logo-img">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="bottom-header">
+        <div class="bottom-header container">
             <nav class="menu-list-header">
                 <ul class="list-header">
                     <li class="item-header is-active">Калькулятор</li>
@@ -47,229 +47,227 @@
         </div>
     </header>
     <main class="main">
-        <div class="main-container">
-            <section class="calculator">
-                <div class="delivery-info">
-                    <div class="delivery-text">
-                        <div class="delivery-title">
-                            Без проблемная доставка купленных вещей из США, Европы и Азии в Россию
-                        </div>
-                        <div class="delivery-description">
-                            Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России
-                        </div>
+        <section class="calculator container">
+            <div class="delivery-info">
+                <div class="delivery-text">
+                    <div class="delivery-title">
+                        Без проблемная доставка купленных вещей из США, Европы и Азии в Россию
                     </div>
-                    <img src="img/man-with-box.png" alt="" class="delivery-img">
+                    <div class="delivery-description">
+                        Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России
+                    </div>
                 </div>
-                <div class="calculator-delivery">
-                    <div class="calculator-text">
-                        <div class="calculator-title">
-                            Калькулятор доставки
-                        </div>
-                        <div class="calculator-description">
-                            Посчитайте, сколько будет стоить перевозка покупки из зарубежа
-                        </div>
+                <img src="img/man-with-box.png" alt="" class="delivery-img">
+            </div>
+            <div class="calculator-delivery">
+                <div class="calculator-text">
+                    <div class="calculator-title">
+                        Калькулятор доставки
                     </div>
-                    <div class="calculator-form">
-                        <div class="calculator-grid">
-                            <div class="calculator-item grid-item full">
-                                <label  class="visually-hidden" for="input-name">Имя</label>
-                                <input type="text" id="input-name" name="name" placeholder="Имя">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-email">Почта</label>
-                                <input type="email" id="input-email" name="email" placeholder="Почта">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-phone">Телефон</label>
-                                <input type="tel" id="input-phone" name="phone" placeholder="Телефон">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-area">Общая площадь</label>
-                                <input type="text" id="input-area" name="area" placeholder="Общая площадь">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-weight">Вес, кг</label>
-                                <input type="text" id="input-weight" name="weight" placeholder="Вес, кг">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-country">Страна покупки</label>
-                                <input type="text" id="input-country" name="country" placeholder="Страна покупки">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-city-buy">Город покупки</label>
-                                <input type="text" id="input-city-buy" name="cityBuy" placeholder="Город покупки">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-region-delivery">Область доставки</label>
-                                <input type="text" id="input-region-delivery" name="regionDelivery" placeholder="Область доставки">
-                            </div>
-                            <div class="calculator-item grid-item">
-                                <label  class="visually-hidden" for="input-city-delivery">Город доставки</label>
-                                <input type="text" id="input-city-delivery" name="cityDelivery" placeholder="Город доставки">
-                            </div>
-                            <div class="calculator-button full">
-                                <button class="grid-button">
-                                    Заказать расчёт
-                                </button>
-                            </div>
+                    <div class="calculator-description">
+                        Посчитайте, сколько будет стоить перевозка покупки из зарубежа
+                    </div>
+                </div>
+                <div class="calculator-form">
+                    <div class="calculator-grid">
+                        <div class="calculator-item grid-item full">
+                            <label  class="visually-hidden" for="input-name">Имя</label>
+                            <input type="text" id="input-name" name="name" placeholder="Имя">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-email">Почта</label>
+                            <input type="email" id="input-email" name="email" placeholder="Почта">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-phone">Телефон</label>
+                            <input type="tel" id="input-phone" name="phone" placeholder="Телефон">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-area">Общая площадь</label>
+                            <input type="text" id="input-area" name="area" placeholder="Общая площадь">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-weight">Вес, кг</label>
+                            <input type="text" id="input-weight" name="weight" placeholder="Вес, кг">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-country">Страна покупки</label>
+                            <input type="text" id="input-country" name="country" placeholder="Страна покупки">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-city-buy">Город покупки</label>
+                            <input type="text" id="input-city-buy" name="cityBuy" placeholder="Город покупки">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-region-delivery">Область доставки</label>
+                            <input type="text" id="input-region-delivery" name="regionDelivery" placeholder="Область доставки">
+                        </div>
+                        <div class="calculator-item grid-item">
+                            <label  class="visually-hidden" for="input-city-delivery">Город доставки</label>
+                            <input type="text" id="input-city-delivery" name="cityDelivery" placeholder="Город доставки">
+                        </div>
+                        <div class="calculator-button full">
+                            <button class="grid-button">
+                                Заказать расчёт
+                            </button>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="advantages">
-                <div class="advantages-title">
-                    Наши преимущества
-                </div>
-                <div class="advantages-grid">
-                    <div class="advantages-item">
-                        <img src="img/advantages-1.svg" alt="" class="advantages-icon">
-                        <div class="advantages-item-text">
-                            <div class="advantages-item-title">
-                                Растоможка груза
-                            </div>
-                            <div class="advantages-item-description">
-                                Мы берём на себя все формальности и бумажную волокиту, связанную с растаможкой груза
-                            </div>
+            </div>
+        </section>
+        <section class="advantages container">
+            <div class="advantages-title">
+                Наши преимущества
+            </div>
+            <div class="advantages-grid">
+                <div class="advantages-item">
+                    <img src="img/advantages-1.svg" alt="" class="advantages-icon">
+                    <div class="advantages-item-text">
+                        <div class="advantages-item-title">
+                            Растоможка груза
                         </div>
-                    </div>
-                    <div class="advantages-item">
-                        <img src="img/advantages-2.svg" alt="" class="advantages-icon">
-                        <div class="advantages-item-text">
-                            <div class="advantages-item-title">
-                                Надёжная упаковка
-                            </div>
-                            <div class="advantages-item-description">
-                                Все товары упаковываются нашими специалистами с особым вниманием к деталям, гарантируя, что они дойдут в безопасности и в отличном состоянии
-                            </div>
-                        </div>
-                    </div>
-                    <div class="advantages-item">
-                        <img src="img/advantages-3.svg" alt="" class="advantages-icon">
-                        <div class="advantages-item-text">
-                            <div class="advantages-item-title">
-                                Быстро и выгодно
-                            </div>
-                            <div class="advantages-item-description">
-                                Мы предлагаем быструю и выгодную доставку, чтобы вы могли насладиться покупками как можно скорее.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="advantages-item">
-                        <img src="img/advantages-4.svg" alt="" class="advantages-icon">
-                        <div class="advantages-item-text">
-                            <div class="advantages-item-title">
-                                Удобный сервис
-                            </div>
-                            <div class="advantages-item-description">
-                                Стремимся сделать процесс доставки максимально удобным для вас, чтобы опыт остался приятным и беззаботным
-                            </div>
-                        </div>
-                    </div>
-                    <div class="advantages-item">
-                        <img src="img/advantages-5.svg" alt="" class="advantages-icon">
-                        <div class="advantages-item-text">
-                            <div class="advantages-item-title">
-                                Прозрачность работы
-                            </div>
-                            <div class="advantages-item-description">
-                                Мы предоставляем полный контроль над каждым этапом доставки, от момента заказа до момента прибытия заказа
-                            </div>
-                        </div>
-                    </div>
-                    <div class="advantages-item">
-                        <img src="img/advantages-6.svg" alt="" class="advantages-icon">
-                        <div class="advantages-item-text">
-                            <div class="advantages-item-title">
-                                Страхование груза
-                            </div>
-                            <div class="advantages-item-description">
-                                Наше страхование обеспечивает полную защиту и покрытие почти все неприятные и неожиданные ситуации
-                            </div>
+                        <div class="advantages-item-description">
+                            Мы берём на себя все формальности и бумажную волокиту, связанную с растаможкой груза
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="guarantees">
-                <div class="guarantess-main">
-                    <div class="guarantees-text">
-                        <div class="guarantees-title">
-                            Гарантии качества
+                <div class="advantages-item">
+                    <img src="img/advantages-2.svg" alt="" class="advantages-icon">
+                    <div class="advantages-item-text">
+                        <div class="advantages-item-title">
+                            Надёжная упаковка
                         </div>
-                        <div class="guarantees-description">
-                            Наши гарантии качества включают в себя полный спектр документов, необходимых для ввоза и вывоза товаров, а также для успешного бизнеса на мировом рынке.
-                            Мы предоставляем вам надёжность и уверенность
-                        </div>
-                    </div>
-                    <div class="guarantees-grid">
-                        <div class="guarantees-item">
-                            <img src="img/cert-1.png" alt="" class="guarantees-img">
-                            <div class="guarantees-item-description">Свидетельство о регистрации в РФ</div>
-                        </div>
-                        <div class="guarantees-item">
-                            <img src="img/cert-2.png" alt="" class="guarantees-img">
-                            <div class="guarantees-item-description">Свидетельство о регистрации в США</div>
-                        </div>
-                        <div class="guarantees-item">
-                            <img src="img/cert-3.png" alt="" class="guarantees-img">
-                            <div class="guarantees-item-description">Свидетельство о регистрации в Китае</div>
-                        </div>
-                        <div class="guarantees-item">
-                            <img src="img/cert-4.png" alt="" class="guarantees-img">
-                            <div class="guarantees-item-description">Свидетельство о регистрации в Великобритнии</div>
+                        <div class="advantages-item-description">
+                            Все товары упаковываются нашими специалистами с особым вниманием к деталям, гарантируя, что они дойдут в безопасности и в отличном состоянии
                         </div>
                     </div>
                 </div>
-                <button class="guarantees-button">Показать больше документов</button>
-            </section>
-            <section class="reviews">
-                <button class="arrow arrow-left" id="buttonLeft">
-                    <img src="icons/left-arrow.svg" alt="">
-                </button>
-                <div class="reviews-form">
-                    <div class="reviews-title">
-                        Отзывы
+                <div class="advantages-item">
+                    <img src="img/advantages-3.svg" alt="" class="advantages-icon">
+                    <div class="advantages-item-text">
+                        <div class="advantages-item-title">
+                            Быстро и выгодно
+                        </div>
+                        <div class="advantages-item-description">
+                            Мы предлагаем быструю и выгодную доставку, чтобы вы могли насладиться покупками как можно скорее.
+                        </div>
                     </div>
-                    <div class="reviews-cards-wrapper">
-                        <div class="reviews-cards" id="reviewCards">
+                </div>
+                <div class="advantages-item">
+                    <img src="img/advantages-4.svg" alt="" class="advantages-icon">
+                    <div class="advantages-item-text">
+                        <div class="advantages-item-title">
+                            Удобный сервис
+                        </div>
+                        <div class="advantages-item-description">
+                            Стремимся сделать процесс доставки максимально удобным для вас, чтобы опыт остался приятным и беззаботным
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-item">
+                    <img src="img/advantages-5.svg" alt="" class="advantages-icon">
+                    <div class="advantages-item-text">
+                        <div class="advantages-item-title">
+                            Прозрачность работы
+                        </div>
+                        <div class="advantages-item-description">
+                            Мы предоставляем полный контроль над каждым этапом доставки, от момента заказа до момента прибытия заказа
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-item">
+                    <img src="img/advantages-6.svg" alt="" class="advantages-icon">
+                    <div class="advantages-item-text">
+                        <div class="advantages-item-title">
+                            Страхование груза
+                        </div>
+                        <div class="advantages-item-description">
+                            Наше страхование обеспечивает полную защиту и покрытие почти все неприятные и неожиданные ситуации
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="guarantees container">
+            <div class="guarantess-main">
+                <div class="guarantees-text">
+                    <div class="guarantees-title">
+                        Гарантии качества
+                    </div>
+                    <div class="guarantees-description">
+                        Наши гарантии качества включают в себя полный спектр документов, необходимых для ввоза и вывоза товаров, а также для успешного бизнеса на мировом рынке.
+                        Мы предоставляем вам надёжность и уверенность
+                    </div>
+                </div>
+                <div class="guarantees-grid">
+                    <div class="guarantees-item">
+                        <img src="img/cert-1.png" alt="" class="guarantees-img">
+                        <div class="guarantees-item-description">Свидетельство о регистрации в РФ</div>
+                    </div>
+                    <div class="guarantees-item">
+                        <img src="img/cert-2.png" alt="" class="guarantees-img">
+                        <div class="guarantees-item-description">Свидетельство о регистрации в США</div>
+                    </div>
+                    <div class="guarantees-item">
+                        <img src="img/cert-3.png" alt="" class="guarantees-img">
+                        <div class="guarantees-item-description">Свидетельство о регистрации в Китае</div>
+                    </div>
+                    <div class="guarantees-item">
+                        <img src="img/cert-4.png" alt="" class="guarantees-img">
+                        <div class="guarantees-item-description">Свидетельство о регистрации в Великобритнии</div>
+                    </div>
+                </div>
+            </div>
+            <button class="guarantees-button">Показать больше документов</button>
+        </section>
+        <section class="reviews container">
+            <button class="arrow arrow-left" id="buttonLeft">
+                <img src="icons/left-arrow.svg" alt="">
+            </button>
+            <div class="reviews-form">
+                <div class="reviews-title">
+                    Отзывы
+                </div>
+                <div class="reviews-cards-wrapper">
+                    <div class="reviews-cards" id="reviewCards">
 
-                        </div>
                     </div>
                 </div>
-                <button class="arrow arrow-right" id="buttonRight">
-                    <img src="icons/right-arrow.svg" alt="">
-                </button>
-            </section>
-            <section class="contact-form">
-                <div class="contact-title">
-                    Остались вопросы?
+            </div>
+            <button class="arrow arrow-right" id="buttonRight">
+                <img src="icons/right-arrow.svg" alt="">
+            </button>
+        </section>
+        <section class="contact-form container">
+            <div class="contact-title">
+                Остались вопросы?
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item grid-item">
+                    <label for="contact-name" class="visually-hidden">Имя</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Имя">
                 </div>
-                <div class="contact-grid">
-                    <div class="contact-item grid-item">
-                        <label for="contact-name" class="visually-hidden">Имя</label>
-                        <input type="text" id="contact-name" name="name" placeholder="Имя">
-                    </div>
-                    <div class="contact-item grid-item">
-                        <label for="contact-email" class="visually-hidden">Почта</label>
-                        <input type="email" id="contact-email" name="email" placeholder="Почта">
-                    </div>
-                    <div class="contact-item grid-item">
-                        <label for="contact-phone" class="visually-hidden">Телефон</label>
-                        <input type="tel" id="contact-phone" name="phone" placeholder="Телефон">
-                    </div>
-                    <div class="contact-item grid-item">
-                        <label for="contact-subject" class="visually-hidden">Тема вопроса</label>
-                        <input type="text" id="contact-subject" name="subject" placeholder="Тема вопроса">
-                    </div>
-                    <div class="contact-item grid-item full big">
-                        <label for="contact-message" class="visually-hidden">Сообщение</label>
-                        <textarea id="contact-message" name="message" placeholder="Сообщение..."></textarea>
-                    </div>
-                    <div class="contact-button full">
-                        <button class="grid-button" type="submit">Оставить заявку</button>
-                    </div>
+                <div class="contact-item grid-item">
+                    <label for="contact-email" class="visually-hidden">Почта</label>
+                    <input type="email" id="contact-email" name="email" placeholder="Почта">
                 </div>
-            </section>
-        </div>
+                <div class="contact-item grid-item">
+                    <label for="contact-phone" class="visually-hidden">Телефон</label>
+                    <input type="tel" id="contact-phone" name="phone" placeholder="Телефон">
+                </div>
+                <div class="contact-item grid-item">
+                    <label for="contact-subject" class="visually-hidden">Тема вопроса</label>
+                    <input type="text" id="contact-subject" name="subject" placeholder="Тема вопроса">
+                </div>
+                <div class="contact-item grid-item full big">
+                    <label for="contact-message" class="visually-hidden">Сообщение</label>
+                    <textarea id="contact-message" name="message" placeholder="Сообщение..."></textarea>
+                </div>
+                <div class="contact-button full">
+                    <button class="grid-button" type="submit">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer-top">
