@@ -1,56 +1,56 @@
 @import "nullstyle.scss";
 @font-face {
     font-family: 'Heebo';
-    src: url('fonts/Heebo-Light.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Heebo-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Heebo';
-    src: url('fonts/Heebo-Bold.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Heebo-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Formular';
-    src: url('fonts/Formular-Bold.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Formular-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Formular';
-    src: url('fonts/Formular-Black.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Formular-Black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Formular';
-    src: url('fonts/Formular.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Formular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Formular';
-    src: url('fonts/Formular-Medium.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Formular-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Formular';
-    src: url('fonts/Formular-Light.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Formular-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Yantramanav';
-    src: url('fonts/Yantramanav-Bold.woff2') format('woff2');
+    src: url('/FirstLendingPage/fonts/Yantramanav-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -512,7 +512,7 @@ img{
 	color: #6B7280;
 	position: relative;
 	&::after{
-		content: url(icons/Quotes.svg);
+		content: url(/FirstLendingPage/icons/Quotes.svg);
 		position: absolute;
 		top: -55px;
 		left: 89%;
