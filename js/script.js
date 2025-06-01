@@ -63,8 +63,11 @@ function renderReviews(){
 
 function getSlideShift() {
     const slide = reviewCards.firstElementChild;
-    const gap = 24;
-    return slide.offsetWidth + gap;
+    const element = document.querySelector('.reviews-cards');
+    const style = getComputedStyle(element);
+    const gap = style.gap;
+    const gapValue = parseFloat(gap);
+    return slide.offsetWidth + gapValue;
 }
 
 const initSlider = () => {
@@ -221,3 +224,4 @@ requestForm.addEventListener('click', () =>{
     requestForm.classList.remove('show')
 })
 // Скрытая форма заявки
+
