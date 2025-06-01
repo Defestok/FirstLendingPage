@@ -97,6 +97,56 @@ body{
 	max-width: var(--container-desktop);
 	padding-inline: var(--container-padding);
 }
+.button{
+	transition: background-color 0.2s ease-in-out;
+	&:hover{
+		background-color: #6D28D9;
+	}
+}
+.lightbox, .request-form{
+	position: fixed;
+	inset: 0;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.75);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	img{
+		max-width: 40vw;
+		max-height: 40vw;
+		object-fit: cover;
+		cursor: zoom-out;
+	}
+}
+.show{
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+.request-container{
+	background-color: var(--color-header);
+	padding: 26px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 20vw;
+	margin-inline: auto;
+	width: 100%;
+	border-radius: 8px;
+}
+.request-form-title{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 900;
+}
+.request-form-grid{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 16px;
+}
 .header{
 	background-color: var(--color-header);
 	min-height: var(--header-height);
@@ -374,6 +424,7 @@ img{
 .guarantees-img{
 	max-height: 375px;
 	object-fit: contain;
+	cursor: pointer;
 }
 .guarantees-item-description{
 	text-align: center;
@@ -581,7 +632,6 @@ img{
 	height: 16px;
 	cursor: pointer;
 }
-
 .burger span {
 	height: 4px;
 	background: #A78BFA;
@@ -596,6 +646,8 @@ img{
 	white-space: nowrap;
 	border: 0;
 }
+
+
 
 @media (max-width: 1536px){
 	.header{

@@ -117,7 +117,7 @@ buttonLeft.addEventListener('click', goToPrevSlide)
 renderReviews();
 initSlider();
 
-
+// Бургер
 const infoRight = document.getElementById("infoRight");
 const logoHeader = document.querySelector(".logo-header");
 const originalParent = document.querySelector(".info-header");
@@ -137,7 +137,6 @@ function moveInfoRight() {
 window.addEventListener("resize", moveInfoRight);
 window.addEventListener("DOMContentLoaded", moveInfoRight);
 
-
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.bottom-header');
 
@@ -145,10 +144,9 @@ burger.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-
 const infoLeft = document.querySelector('.info-left');
 const bottomHeader = document.querySelector('.bottom-header');
-const infoHeader = document.querySelector('.info-header'); // родитель info-left
+const infoHeader = document.querySelector('.info-header');
 let moved = false;
 
 function relocateInfoLeft() {
@@ -195,3 +193,31 @@ window.addEventListener('DOMContentLoaded', relocateInfoLeft);
 
   window.addEventListener('resize', relocateBurgerMenu);
   window.addEventListener('DOMContentLoaded', relocateBurgerMenu);
+// Бургер
+
+// Увеличенное фото
+const lightbox = document.getElementById('lightbox');
+const zoomed = lightbox.querySelector('img')
+
+document.querySelectorAll('.guarantees-img').forEach(img =>{
+    img.addEventListener('click', ()=>{
+        zoomed.src = img.src;
+        lightbox.classList.add('show')
+    });
+});
+
+lightbox.addEventListener('click', ()=>{
+    lightbox.classList.remove('show')
+    zoomed.src = ''
+})
+// Увеличенное фото
+
+// Скрытая форма заявки
+const requestForm = document.querySelector('.request-form')
+document.getElementById('request-button').addEventListener('click', ()=>{
+    requestForm.classList.add('show')
+});
+requestForm.addEventListener('click', () =>{
+    requestForm.classList.remove('show')
+})
+// Скрытая форма заявки
