@@ -74,7 +74,9 @@
 	--container-laptop-sm: 640px;
 	--container-padding: 15px;
 }
-
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-family: Formular, Arial, sans-serif;
 	background-color: var(--color-main);
@@ -229,11 +231,14 @@ body{
 	font-weight: 700;
 }
 .item-header{
-	transition: color 0.2s;
+	transition: color 0.3s, border-bottom 0.2s ease;
+  	border-bottom: 2px dashed transparent;
 	cursor: pointer;
-
 	&:hover{
 	color: var(--color-text);
+	}
+	a{
+		all: unset;
 	}
 }
 .button-request{

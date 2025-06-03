@@ -272,6 +272,10 @@ svg * {
   --container-padding: 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Formular, Arial, sans-serif;
   background-color: var(--color-main);
@@ -442,11 +446,15 @@ body {
 }
 
 .item-header {
-  transition: color 0.2s;
+  transition: color 0.3s, border-bottom 0.2s ease;
+  border-bottom: 2px dashed transparent;
   cursor: pointer;
 }
 .item-header:hover {
   color: var(--color-text);
+}
+.item-header a {
+  all: unset;
 }
 
 .button-request {

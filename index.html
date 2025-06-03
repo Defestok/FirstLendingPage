@@ -6,6 +6,7 @@
     <title>FromBoard Delivery</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="header">
         <div class="top-header container">
@@ -35,10 +36,10 @@
         <div class="bottom-header container">
             <nav class="menu-list-header">
                 <ul class="list-header">
-                    <li class="item-header is-active">Калькулятор</li>
-                    <li class="item-header">О нас</li>
-                    <li class="item-header">Гарантии</li>
-                    <li class="item-header">Отзывы</li>
+                    <li class="item-header is-active"><a href="#calculator">Калькулятор</a></li>
+                    <li class="item-header"><a href="#about">О нас</a></li>
+                    <li class="item-header"><a href="#guarantees">Гарантии</a></li>
+                    <li class="item-header"><a href="#reviews">Отзывы</a></li>
                 </ul>
             </nav>
             <div class="request-button-header">
@@ -47,7 +48,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="calculator container">
+        <section class="calculator container" id="calculator">
             <div class="delivery-info">
                 <div class="delivery-text">
                     <div class="delivery-title">
@@ -115,7 +116,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages container">
+        <section class="advantages container" id="about">
             <div class="advantages-title">
                 Наши преимущества
             </div>
@@ -188,7 +189,7 @@
                 </div>
             </div>
         </section>
-        <section class="guarantees container">
+        <section class="guarantees container" id="guarantees">
             <div class="guarantess-main">
                 <div class="guarantees-text">
                     <div class="guarantees-title">
@@ -220,7 +221,7 @@
             </div>
             <button class="guarantees-button button">Показать больше документов</button>
         </section>
-        <section class="reviews container">
+        <section class="reviews container" id="reviews">
             <button class="arrow arrow-left" id="buttonLeft">
                 <img src="icons/left-arrow.svg" alt="">
             </button>

@@ -198,6 +198,7 @@ window.addEventListener('DOMContentLoaded', relocateInfoLeft);
   window.addEventListener('DOMContentLoaded', relocateBurgerMenu);
 // Бургер
 
+
 // Увеличенное фото
 const lightbox = document.getElementById('lightbox');
 const zoomed = lightbox.querySelector('img')
@@ -215,6 +216,7 @@ lightbox.addEventListener('click', ()=>{
 })
 // Увеличенное фото
 
+
 // Скрытая форма заявки
 const requestForm = document.querySelector('.request-form')
 document.getElementById('request-button').addEventListener('click', ()=>{
@@ -225,3 +227,13 @@ requestForm.addEventListener('click', () =>{
 })
 // Скрытая форма заявки
 
+
+// Смена is-active в header
+document.querySelectorAll('.item-header').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelectorAll('.item-header').forEach(el => el.classList.remove('is-active'));
+        link.classList.add('is-active');
+    });
+});
+
+// Смена is-active в header
