@@ -394,6 +394,8 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: #000;
 }
 
 .info-left {
@@ -862,6 +864,8 @@ img {
   display: flex;
   gap: 4px;
   align-items: center;
+  color: #fff;
+  text-decoration: none;
 }
 .footer-left-logo p {
   font-size: 24px;
