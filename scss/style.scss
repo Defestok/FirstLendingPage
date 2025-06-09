@@ -1142,9 +1142,13 @@ img{
 	}
 	.list-footer{
 		flex-direction: column;
+		gap: 16px;
 	}
 	.info-right{
 		gap: 8px;
+	}
+	.footer-left-rules{
+		text-align: center;
 	}
 }
 @media (max-width: 400px){
