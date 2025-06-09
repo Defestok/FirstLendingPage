@@ -1346,4 +1346,13 @@ img {
   .info-right {
     gap: 8px;
   }
+}
+@media (max-width: 400px) {
+  .logo-text {
+    max-width: 120px;
+  }
+  .logo-img {
+    max-width: 40px;
+    height: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
