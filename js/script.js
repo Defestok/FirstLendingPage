@@ -49,76 +49,80 @@ function renderReviews(){
 
         const itemReviews = document.createElement('div');
         itemReviews.classList.add('reviews-item');
-        itemReviews.dataset.index = index;
+        // itemReviews.dataset.index = index;
         itemReviews.append(textElement, nameElement);
 
-        reviewCards.appendChild(itemReviews);
+        const swiper = document.createElement('div');
+        swiper.classList.add('swiper-slide');
+        swiper.append(itemReviews);
+
+        reviewCards.appendChild(swiper);
     })
-    const firstClone = reviewCards.firstElementChild.cloneNode(true);
-    const lastClone = reviewCards.lastElementChild.cloneNode(true);
+    // const firstClone = reviewCards.firstElementChild.cloneNode(true);
+    // const lastClone = reviewCards.lastElementChild.cloneNode(true);
 
-    reviewCards.appendChild(firstClone);
-    reviewCards.insertBefore(lastClone, reviewCards.firstChild)
+    // reviewCards.appendChild(firstClone);
+    // reviewCards.insertBefore(lastClone, reviewCards.firstChild)
 }
 
-function getSlideShift() {
-    const slide = reviewCards.firstElementChild;
-    const element = document.querySelector('.reviews-cards');
-    const style = getComputedStyle(element);
-    const gap = style.gap;
-    const gapValue = parseFloat(gap);
-    return slide.offsetWidth + gapValue;
-}
+// function getSlideShift() {
+//     const slide = reviewCards.firstElementChild;
+//     const element = document.querySelector('.reviews-cards');
+//     const style = getComputedStyle(element);
+//     const gap = style.gap;
+//     const gapValue = parseFloat(gap);
+//     return slide.offsetWidth + gapValue;
+// }
 
-const initSlider = () => {
-    const shift = getSlideShift();
-    reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
-};
+// const initSlider = () => {
+//     const shift = getSlideShift();
+//     reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
+// };
 
-const goToPrevSlide = () => {
-    const shift = getSlideShift();
-    currentIndex--;
-    reviewCards.style.transition = 'translate 0.5s ease-in-out';
-    reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
+// const goToPrevSlide = () => {
+//     const shift = getSlideShift();
+//     currentIndex--;
+//     reviewCards.style.transition = 'translate 0.5s ease-in-out';
+//     reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
 
-    reviewCards.addEventListener(
-        'transitionend', () => {
-            if (currentIndex < 0) {
-                currentIndex = reviews_Cards.length - 1;
-                reviewCards.style.transition = 'none';
-                reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
-                buttonRight.disabled = false;
-            }
-        },
-        { once: true }
-    );
-};
+//     reviewCards.addEventListener(
+//         'transitionend', () => {
+//             if (currentIndex < 0) {
+//                 currentIndex = reviews_Cards.length - 1;
+//                 reviewCards.style.transition = 'none';
+//                 reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
+//                 buttonRight.disabled = false;
+//             }
+//         },
+//         { once: true }
+//     );
+// };
 
-const goToNextSlide = () => {
-    const shift = getSlideShift();
-    currentIndex++;
-    reviewCards.style.transition = 'translate 0.5s ease-in-out';
-    reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
+// const goToNextSlide = () => {
+//     const shift = getSlideShift();
+//     currentIndex++;
+//     reviewCards.style.transition = 'translate 0.5s ease-in-out';
+//     reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
 
-    reviewCards.addEventListener(
-        'transitionend', () => {
-            if (currentIndex >= reviews_Cards.length) {
-                currentIndex = 0;
-                reviewCards.style.transition = 'none';
-                reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
-                buttonRight.disabled = false;
-            }
-        },
-        { once: true }
-    );
-};
+//     reviewCards.addEventListener(
+//         'transitionend', () => {
+//             if (currentIndex >= reviews_Cards.length) {
+//                 currentIndex = 0;
+//                 reviewCards.style.transition = 'none';
+//                 reviewCards.style.translate = `-${shift * (currentIndex + 1)}px`;
+//                 buttonRight.disabled = false;
+//             }
+//         },
+//         { once: true }
+//     );
+// };
 
 
-buttonRight.addEventListener('click', goToNextSlide)
-buttonLeft.addEventListener('click', goToPrevSlide)
+// buttonRight.addEventListener('click', goToNextSlide)
+// buttonLeft.addEventListener('click', goToPrevSlide)
 
 renderReviews();
-initSlider();
+// initSlider();
 
 // Бургер
 const infoRight = document.getElementById("infoRight");
@@ -218,13 +222,17 @@ lightbox.addEventListener('click', ()=>{
 
 
 // Скрытая форма заявки
-const requestForm = document.querySelector('.request-form')
-document.getElementById('request-button').addEventListener('click', ()=>{
-    requestForm.classList.add('show')
+const requestForm = document.querySelector('.request-form');
+const requestContainer = requestForm.querySelector('.request-container');
+document.getElementById('request-button').addEventListener('click', () => {
+    requestForm.classList.add('show');
 });
-requestForm.addEventListener('click', () =>{
-    requestForm.classList.remove('show')
-})
+requestForm.addEventListener('click', (e) => {
+    if (e.target === requestForm) {
+        requestForm.classList.remove('show');
+    }
+});
+requestContainer.addEventListener('click', (e) => e.stopPropagation());
 // Скрытая форма заявки
 
 
@@ -235,5 +243,47 @@ document.querySelectorAll('.item-header').forEach(link => {
         link.classList.add('is-active');
     });
 });
-
 // Смена is-active в header
+
+// document.querySelectorAll('*').forEach(el => {
+//   if (el.getBoundingClientRect().right > window.innerWidth) {
+//     console.log('Overflowing:', el);
+//   }
+// });
+
+new Swiper('.reviews-cards-wrapper', {
+    navigation: {
+        nextEl: '.arrow-right',
+        prevEl: '.arrow-left'
+
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    initialSlide: 2,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        1025: {
+            lidesPerView: 2,
+        }
+    }
+});
+
+function slideWidth() {
+    if (window.innerWidth <= 578) {
+        const widthBlock = document.querySelector('.contact-form');
+        const width = widthBlock.offsetWidth;
+
+        const block = document.querySelector('.reviews-cards-wrapper');
+        block.style.maxWidth = width + 'px';
+    }
+}
+
+slideWidth()
