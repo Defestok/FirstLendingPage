@@ -1343,4 +1343,7 @@ img {
   .list-footer {
     flex-direction: column;
   }
+  .info-right {
+    gap: 8px;
+  }
 }/*# sourceMappingURL=style.css.map */
